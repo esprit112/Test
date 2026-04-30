@@ -1,0 +1,5 @@
+{
+  "name": "Lumina Restore",
+  "description": "A professional-grade agentic photograph restoration platform using Gemini 3 Pro for forensic diagnosis and Nano Banana Pro for high-fidelity 4K reconstruction.",
+  "requestFramePermissions": []
+}

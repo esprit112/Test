@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Outfit", sans-serif;
+
+  /* We override standard grays to be true ZINC for a premium tech look */
+  --color-gray-750: #27272a;
+  --color-gray-800: #27272a;
+  --color-gray-850: #18181b;
+  --color-gray-900: #18181b;
+  --color-gray-950: #09090b;
+
+  /* Map neon colors to sophisticated branding */
+  --color-neon-cyan: #3b82f6; /* Sophisticated Blue */
+  --color-neon-pink: #f59e0b; /* Professional Amber */
+  --color-neon-yellow: #10b981; /* Emerald Green */
+  --color-neon-purple: #6366f1; /* Indigo */
+
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-glow: none;
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-in: in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fade-in 0.3s ease-out forwards;
+  --animate-scan: scan 3s linear infinite;
+
+  @keyframes in {
+    0% { opacity: 0; transform: translateY(5px) scale(0.99) }
+    100% { opacity: 1; transform: translateY(0) scale(1) }
+  }
+  @keyframes fade-in {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+  }
+  @keyframes scan {
+    0% { top: 0% }
+    100% { top: 100% }
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #09090b;
+  color: #fafafa;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Redefined layout primitives for a much cleaner look */
+.glass-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border-radius: 12px !important;
+}
+
+.glass-panel {
+  background: #09090b;
+  border-right: 1px solid #27272a;
+}
+
+/* Disable all aggressive glows */
+.neon-glow-cyan {
+  box-shadow: none;
+}
+
+/* Convert the cyan gradient to a simpler subtle gradient */
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f46; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b; 
+}
+
+.comparison-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 50;
+  cursor: col-resize;
+}
+.comparison-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 100vh;
+  width: 2px;
+  background: #3b82f6;
+  box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+.mask-radial {
+  mask-image: radial-gradient(circle, white, transparent 70%);
+}

@@ -1,0 +1,25 @@
+{
+  "name": "lumina-ai-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Professional Photo Restoration Backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.33.3",
+    "@google/genai": "*",
+    "dotenv": "^16.4.5",
+    "cors": "^2.8.5",
+    "uuid": "^9.0.1",
+    "archiver": "^7.0.0",
+    "pdfkit": "^0.14.0",
+    "express-validator": "^7.0.0",
+    "express-rate-limit": "^7.0.0",
+    "morgan": "^1.10.0"
+  }
+}
